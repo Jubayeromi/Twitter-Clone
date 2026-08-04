@@ -4,7 +4,7 @@ import { useFeed } from '../hooks/UseFeed'
 
 const ForYou = () => {
 
-const fullPost = useFeed( 'nature,actress,red carpet, europe, sunset, mountains', 'nature, travel,people, film, wallpaper')
+const fullPost = useFeed( 'nature , sunset, mountains', 'nature, wallpaper')
 
 
 
