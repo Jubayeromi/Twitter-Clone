@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useRef, useState } from 'react'
 import { useFeed } from '../hooks/UseFeed'
+import Post from './Post'
 
 const ForYou = () => {
 
@@ -9,8 +10,8 @@ const fullPost = useFeed( 'nature , sunset, mountains', 'nature, wallpaper')
 
 
   return (
-    <div className='border-y flex flex-col'>
-
+    <div className='flex flex-col'>
+<Post />
 
       {fullPost.map((fun, idx) => (
 
@@ -18,7 +19,7 @@ const fullPost = useFeed( 'nature , sunset, mountains', 'nature, wallpaper')
 
         <div
 
-          key={idx} className='border-b-2 flex pb-5'>
+          key={idx} className='border border-b-gray-600 flex pb-5'>
 
           <div className='ml-5 mt-5 w-10 h-10 shrink-0'>
             <img className='h-10 w-10 rounded-full object-top object-cover' src={fun.image} alt="" />
