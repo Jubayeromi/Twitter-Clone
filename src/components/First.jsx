@@ -59,7 +59,7 @@ const First = () => {
                     </li>
                 </ul>
 
-                <button className="post-button w-11">POST</button>
+                <button className="post-button px-8 py-3 w-[90%] rounded-3xl bg-blue-400 cursor-pointer mt-5">POST</button>
             </div>
         </div>
     

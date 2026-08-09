@@ -1,38 +1,33 @@
 import React from 'react'
-import { deepika } from '../hooks/deepika';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const Actresses = () => {
-
-  // const post = deepika('https://pinterest.com/Actressheels/milf-actress/','https://pinterest23.p.rapidapi.com/board','pinterest23.p.rapidapi.com');
-
-
-  const [post, setPost] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  // Target Pinterest Board URL for Deepika Padukone
-  const MILF_BOARD_URL = 'https://pinterest.com/Actressheels/milf-actress/';
-  // Or use a specific board like: 'https://in.pinterest.com/username/deepika-padukone-board/'
-
-  useEffect(() => {
-    // Pass the target Pinterest URL as a parameter
-    const apiUrl = `http://localhost:5000/api/board/all?url=${encodeURIComponent(MILF_BOARD_URL)}`;
-
-    axios
-      .get(apiUrl)
-      .then((res) => setPost(res.data.posts || []))
-      .catch((err) => console.error('Error fetching milf images:', err))
-      .finally(() => setLoading(false));
-  }, []);
+const Nusrat = () => {
+     const [post, setPost] = useState([]);
+      const [loading, setLoading] = useState(true);
+    
+      // Target Pinterest Board URL for Deepika Padukone
+      const NUSRAT_BOARD_URL = 'https://www.pinterest.com/search/pins/?q=nusrat%20bharucha%20hot%20images&rs=ac&len=17&source_id=ac_DOLjJN8t&eq=nusrat%20hot%20image&etslf=6382'; 
+      // Or use a specific board like: 'https://in.pinterest.com/username/deepika-padukone-board/'
+    
+      useEffect(() => {
+        // Pass the target Pinterest URL as a parameter
+        const apiUrl = `http://localhost:5000/api/board/all?url=${encodeURIComponent(NUSRAT_BOARD_URL)}`;
+    
+        axios
+          .get(apiUrl)
+          .then((res) => setPost(res.data.posts || []))
+          .catch((err) => console.error('Error fetching Nuarat images:', err))
+          .finally(() => setLoading(false));
+      }, []);
   return (
     <div>
       <div className="max-w-2xl mx-auto py-4">
-        <h1 className="text-2xl font-bold text-center mb-6">Milf Pins</h1>
+        <h1 className="text-2xl font-bold text-center mb-6">Nusrat Pins</h1>
 
         {loading && (
           <div className="text-center py-10 text-gray-400 font-semibold">
-            Fetching Milf images from Pinterest...
+            Fetching Nusrat images from Pinterest...
           </div>
         )}
 
@@ -66,4 +61,4 @@ const Actresses = () => {
   )
 }
 
-export default Actresses
+export default Nusrat
