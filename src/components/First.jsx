@@ -25,7 +25,7 @@ const First = () => {
                     <li
                         className="flex gap-x-3 items-center w-fit pl-3 pr-6 py-2 rounded-3xl justify-start hover:bg-gray-800 font-[350] hover:cursor-pointer">
                         <img src="/seach.svg" alt=""/>
-                        Explore
+                       <span>Explore</span> 
                     </li>
                     <li
                         className="flex gap-x-3 items-center w-fit pl-3 pr-6 py-2 rounded-3xl justify-start hover:bg-gray-800 font-[350] hover:cursor-pointer">
@@ -35,12 +35,12 @@ const First = () => {
                     <li
                         className="flex gap-x-3 items-center w-fit pl-3 pr-6 py-2 rounded-3xl justify-start hover:bg-gray-800 font-[350] hover:cursor-pointer">
                         <img src="/person.svg" alt=""/>
-                        Follow
+                       <span>Follow</span> 
                     </li>
                     <li
                         className="flex gap-x-3 items-center w-fit pl-3 pr-6 py-2 rounded-3xl justify-start hover:bg-gray-800 font-[350] hover:cursor-pointer">
                         <img className="invert" src="/sms.svg" alt=""/>
-                        Chat
+                       <span>Chat</span> 
                     </li>
                     <li
                         className="flex gap-x-3 items-center w-fit pl-3 pr-6 py-2 rounded-3xl justify-start hover:bg-gray-800 font-[350] hover:cursor-pointer">
@@ -50,12 +50,12 @@ const First = () => {
                     <li
                         className="flex gap-x-3 items-center w-fit pl-3 pr-6 py-2 rounded-3xl justify-start hover:bg-gray-800 font-[350] hover:cursor-pointer">
                         <img src="/account.svg" alt=""/>
-                        Profile
+                       <span>Profile</span> 
                     </li>
                     <li
                         className="flex gap-x-3 items-center w-fit pl-3 pr-6 py-2 rounded-3xl justify-start hover:bg-gray-800 font-[350] hover:cursor-pointer">
                         <img src="/more_.svg" alt=""/>
-                        More
+                       <span>More</span> 
                     </li>
                 </ul>
 

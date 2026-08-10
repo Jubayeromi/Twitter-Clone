@@ -54,14 +54,18 @@ if(loading.current) return
 
         const thumbnail = napi.data.links.download;
         // setpost(thumbnail)
-        // console.log(thumbnail)
+        const des = napi.data.alt_description
+        const likes = napi.data.likes;
+        console.log(napi)
 
         const newPost = {
           name: `${uName.first} ${uName.last}`,
           image: data.results[i].picture.large,
-          des: `${uName.title} ${uName.first} ${uName.last}`,
+          // des: `${uName.title} ${uName.first} ${uName.last}`,
+          des:des,
           location: `${location.country}, ${location.state}`,
-          thumbnail: napi.data.links.download
+          thumbnail: napi.data.links.download,
+          likes:likes
 
         }
 

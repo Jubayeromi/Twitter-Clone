@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useRef, useState } from 'react';
 import { deepika } from '../hooks/deepika';
+import Interection from '../components/Interection';
 
 const Actress = () => {
 
@@ -57,6 +58,9 @@ const [post, setPost] = useState([]);
                 />
               </div>
             )}
+           
+            <Interection />
+            
           </div>
         </div>
       ))}
