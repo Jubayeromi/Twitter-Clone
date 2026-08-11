@@ -1,39 +1,36 @@
 import React from 'react'
-import { deepika } from '../hooks/deepika';
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+import axios from 'axios'
 
-const Actresses = () => {
-
-  // const post = deepika('https://pinterest.com/Actressheels/milf-actress/','https://pinterest23.p.rapidapi.com/board','pinterest23.p.rapidapi.com');
-
-
+const Anushka = () => {
+    
   const [post, setPost] = useState([]);
   const [loading, setLoading] = useState(true);
   const [index, setIndex] = useState(0)
 
   // Target Pinterest Board URL for Deepika Padukone
-  const MILF_BOARD_URL = ['https://pinterest.com/Actressheels/milf-actress/','https://www.pinterest.com/search/pins/?q=bollywood%20hoties%20with%20high%20heels&rs=typed'];
+  const ANUSHKA_BOARD_URL = ['https://www.pinterest.com/search/pins/?q=anushka%20shetty%20hot%20pics&rs=typed','https://www.pinterest.com/search/pins/?q=anushka%20shetty%20in%20high%20heels%20hot%20pics&rs=typed'];
   // Or use a specific board like: 'https://in.pinterest.com/username/deepika-padukone-board/'
 
   useEffect(() => {
     // Pass the target Pinterest URL as a parameter
-    const apiUrl = `http://localhost:5000/api/board/all?url=${encodeURIComponent(MILF_BOARD_URL[index])}`;
+    const apiUrl = `http://localhost:5000/api/board/all?url=${encodeURIComponent(ANUSHKA_BOARD_URL[index])}`;
 
     axios
       .get(apiUrl)
       .then((res) => setPost(res.data.posts || []))
-      .catch((err) => console.error('Error fetching milf images:', err))
+      .catch((err) => console.error('Error fetching Anushka images:', err))
       .finally(() => setLoading(false));
   }, [index]);
   return (
     <div>
+     
       <div className="max-w-2xl mx-auto py-4">
-        <h1 className="text-2xl font-bold text-center mb-6">Milf Pins</h1>
+        <h1 className="text-2xl font-bold text-center mb-6">Anushka Pins</h1>
 
         {loading && (
           <div className="text-center py-10 text-gray-400 font-semibold">
-            Fetching Milf images from Pinterest...
+            Fetching Anushka Shetty images from Pinterest...
           </div>
         )}
 
@@ -77,7 +74,7 @@ const Actresses = () => {
           <div className='text-center'><p className='px-1 py-4 w-6 rounded-xl bg-gray-500'>{index+1}</p></div>
           <div><button
           onClick={()=>{
-            if(index<MILF_BOARD_URL.length-1){
+            if(index<ANUSHKA_BOARD_URL.length-1){
               setIndex(index+1)
               window.scrollTo({
                 top:0,
@@ -88,8 +85,9 @@ const Actresses = () => {
           className='px-2 cursor-pointer py-3 rounded-xl bg-gray-400 active:scale-95'>Next</button></div>
         </div>
       </div>
+    
     </div>
   )
 }
 
-export default Actresses
+export default Anushka

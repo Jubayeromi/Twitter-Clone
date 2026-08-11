@@ -15,6 +15,7 @@ import Malaika from '../pages/Malaika'
 import Nusrat from '../pages/Nusrat'
 import Shweta from '../pages/Shweta'
 import EshaGupta from '../pages/EshaGupta'
+import Anushka from '../pages/Anushka'
 
 const Second = () => {
     return (
@@ -92,6 +93,11 @@ const Second = () => {
                             Esha
                         </div>
                     </Link>
+                      <Link className='flex flex-1' to="/anushka">
+                        <div className="right px-2 h-10 w-fit text-center flex justify-center items-center">
+                            Anushka Shetty
+                        </div>
+                    </Link>
                     <div className='flex justify-center items-center'> <Settings /> </div>
                 </div>
 
@@ -110,6 +116,7 @@ const Second = () => {
                     <Route path='/nusrat' element={<Nusrat />} />
                     <Route path='/shweta' element={<Shweta />} />
                     <Route path='/esha' element={<EshaGupta />} />
+                    <Route path='/anushka' element={<Anushka />} />
                 </Routes>
 
             </div>
