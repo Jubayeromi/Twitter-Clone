@@ -56,6 +56,11 @@ if(loading.current) return
         // setpost(thumbnail)
         const des = napi.data.alt_description
         const likes = napi.data.likes;
+        if(likes>1000000){
+likes = likes/1000000 +'M'
+        } else if(likes>999){
+likes= likes/1000 +'K'
+        }
         console.log(napi)
 
         const newPost = {
