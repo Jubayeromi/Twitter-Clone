@@ -2,8 +2,11 @@ import React from 'react'
 
 const First = () => {
   return (
-    
-       <div className="first flex flex-col md:ml-25 w-1/6 ">
+   
+
+       <div className="first flex flex-col lg:ml-20 lg:w-[20%] md:w-[30%] w-[20%] relative ">
+        <div className='sticky top-0'>
+
             <div className="logo pl-3 pb-5 pt-4">
 
                 <svg viewBox="0 0 24 24" aria-hidden="true"
@@ -20,49 +23,51 @@ const First = () => {
                     <li
                         className="flex gap-x-3 items-center w-fit pl-3 pr-6 py-2 hover:bg-gray-800 justify-start rounded-3xl font-[350] hover:cursor-pointer text-white">
                         <img className=' ' src="/home.svg" alt="" />
-                        <span>Home</span>
+                        <span className="hidden md:block">Home</span>
                     </li>
                     <li
                         className="flex gap-x-3 items-center w-fit pl-3 pr-6 py-2 rounded-3xl justify-start hover:bg-gray-800 font-[350] hover:cursor-pointer">
                         <img src="/seach.svg" alt=""/>
-                       <span>Explore</span> 
+                       <span className="hidden md:block">Explore</span> 
                     </li>
                     <li
                         className="flex gap-x-3 items-center w-fit pl-3 pr-6 py-2 rounded-3xl justify-start hover:bg-gray-800 font-[350] hover:cursor-pointer">
                         <img className='' src="/notifications.svg" alt=""/>
-                        <span>Notification </span>
+                        <span className="hidden md:block">Notification </span>
                     </li>
                     <li
                         className="flex gap-x-3 items-center w-fit pl-3 pr-6 py-2 rounded-3xl justify-start hover:bg-gray-800 font-[350] hover:cursor-pointer">
                         <img src="/person.svg" alt=""/>
-                       <span>Follow</span> 
+                       <span className="hidden md:block">Follow</span> 
                     </li>
                     <li
                         className="flex gap-x-3 items-center w-fit pl-3 pr-6 py-2 rounded-3xl justify-start hover:bg-gray-800 font-[350] hover:cursor-pointer">
                         <img className="invert" src="/sms.svg" alt=""/>
-                       <span>Chat</span> 
+                       <span className="hidden md:block">Chat</span> 
                     </li>
                     <li
                         className="flex gap-x-3 items-center w-fit pl-3 pr-6 py-2 rounded-3xl justify-start hover:bg-gray-800 font-[350] hover:cursor-pointer">
                         <img className="invert" src="/bookmark.svg" alt=""/>
-                        <span>Bookmark </span>
+                        <span className="hidden md:block">Bookmark </span>
                     </li>
                     <li
                         className="flex gap-x-3 items-center w-fit pl-3 pr-6 py-2 rounded-3xl justify-start hover:bg-gray-800 font-[350] hover:cursor-pointer">
                         <img src="/account.svg" alt=""/>
-                       <span>Profile</span> 
+                       <span className="hidden md:block">Profile</span> 
                     </li>
                     <li
                         className="flex gap-x-3 items-center w-fit pl-3 pr-6 py-2 rounded-3xl justify-start hover:bg-gray-800 font-[350] hover:cursor-pointer">
                         <img src="/more_.svg" alt=""/>
-                       <span>More</span> 
+                       <span className="hidden md:block">More</span> 
                     </li>
                 </ul>
 
-                <button className="post-button px-8 py-3 w-[90%] rounded-3xl bg-blue-400 cursor-pointer mt-5">POST</button>
+                <button className="post-button px-8 py-3 w-[80%] rounded-3xl bg-blue-400 cursor-pointer mt-5">POST</button>
             </div>
+                            </div>
         </div>
     
+                           
   )
 }
 

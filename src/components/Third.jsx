@@ -1,11 +1,13 @@
 import React from 'react'
 
 const Third = () => {
-  return (
-   
-      <div className="third flex flex-col w-1/4 md:mr-25 ">
+    return (
+
+        <div className="third lg:flex flex-col w-[23%] md:mr-20 hidden relative ">
+            <div className='sticky top-0'>
+
             <input id="" className="m-3 rounded-full bg-gray-900 w-[92%] text-white p-1 pb-1 pl-3" type="search"
-                placeholder="search"/>
+                placeholder="search" />
             <div className="whats m-4 border border-gray-700 rounded-xl bg-gray-950 flex flex-col  ">
                 <h1 className="text-xl font-bold p-4">What's happening</h1>
                 <div className="items flex justify-between cursor-pointer hover:bg-slate-800 p-4 rounded-sm">
@@ -81,8 +83,9 @@ const Third = () => {
                 </div>
             </div>
         </div>
-   
-  )
+                                </div>
+
+    )
 }
 
 export default Third

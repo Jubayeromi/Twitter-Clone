@@ -4,3 +4,13 @@ body{
   background-color: black;
   color: white;
 }
+
+@media (width <= 650px) {
+  .first{
+    display: none;
+  }
+  .second{
+    width: 100%;
+  
+  }
+}

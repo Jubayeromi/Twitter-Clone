@@ -20,7 +20,7 @@ import Anushka from '../pages/Anushka'
 const Second = () => {
     return (
 
-        <div className="second flex w-1/3 border-x border-gray-300">
+        <div className="second flex w-[55%] lg:w-[40%] border-x border-gray-300">
             <div className="top flex transparent w-full flex-col relative">
                 <div className='flex bg-black/70 backdrop:blur-3xl border sticky top-0 border-y-gray-600 overflow-x-scroll py-2 '>
                     <Link className='flex ' to="/">

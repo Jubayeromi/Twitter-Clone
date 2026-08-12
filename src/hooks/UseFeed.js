@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from 'react'
 import axios from 'axios'
 
-export function useFeed(query,topics) {
+export function useFeed(query, topics) {
 
-      // const [name, setName] = useState('')
+  // const [name, setName] = useState('')
   // const [image, setImage] = useState('')
   // const [post, setpost] = useState('')
   // const [des, setdes] = useState('')
@@ -14,9 +14,9 @@ export function useFeed(query,topics) {
   const [fullPost, setfullPost] = useState([])
 
   const Data = async () => {
-if(loading.current) return
+    if (loading.current) return
 
-  loading.current=true
+    loading.current = true
 
 
 
@@ -35,7 +35,7 @@ if(loading.current) return
             Authorization: `Client-ID ${import.meta.env.VITE_UNSPLASH_KEY}`,
           },
           params: {
-            query: query ,
+            query: query,
             content_filter: 'low',
             // orientation:'portrait' , 
             topics: topics
@@ -55,33 +55,52 @@ if(loading.current) return
         const thumbnail = napi.data.links.download;
         // setpost(thumbnail)
         const des = napi.data.alt_description
-        const likes = napi.data.likes;
-        if(likes>1000000){
-likes = likes/1000000 +'M'
-        } else if(likes>999){
-likes= likes/1000 +'K'
-        }
+        let likes = napi.data.likes;
+        let views = napi.data.views;
+        let repost = napi.data.downloads;
+
+        if (likes > 1000000) {
+          likes = (likes / 1000000).toFixed(1) + 'M'
+        } else if (likes > 999) {
+          likes = (likes / 1000).toFixed(1) + 'K'
+        };
+
+        if (views > 1000000) {
+          views = (views / 1000000).toFixed(1) + 'M'
+        } else if (views > 999) {
+          views = (views / 1000).toFixed(1) + 'K'
+        };
+
+        if (repost > 1000000) {
+          repost = (repost / 1000000).toFixed(1) + 'M'
+        } else if (repost > 999) {
+          repost = (repost / 1000).toFixed(1) + 'K'
+        };
+
+
         console.log(napi)
 
         const newPost = {
           name: `${uName.first} ${uName.last}`,
           image: data.results[i].picture.large,
           // des: `${uName.title} ${uName.first} ${uName.last}`,
-          des:des,
+          des: des,
           location: `${location.country}, ${location.state}`,
           thumbnail: napi.data.links.download,
-          likes:likes
+          likes: likes,
+          views: views,
+          repost:repost,
 
         }
 
         setfullPost(prev => [...prev, newPost])
       }
     } catch (err) {
-  console.error("failed to get posts", err)
+      console.error("failed to get posts", err)
     } finally {
-loading.current=false
-  }
+      loading.current = false
     }
+  }
 
   useEffect(() => {
     Data()

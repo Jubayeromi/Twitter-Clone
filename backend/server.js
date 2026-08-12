@@ -174,7 +174,7 @@ app.get('/api/board/all', async (req, res) => {
     await page.setViewport({ width: 1920, height: 1080 });
 
     await page.goto(targetUrl, { waitUntil: 'domcontentloaded', timeout: 60000 });
-    await page.waitForSelector('img[src*="i.pinimg.com"]', { timeout: 15000 });
+    await page.waitForSelector('img[src*="i.pinimg.com"]', { timeout: 16000 });
 
     // Scroll to lazy-load pin batch
     await page.evaluate(async () => {

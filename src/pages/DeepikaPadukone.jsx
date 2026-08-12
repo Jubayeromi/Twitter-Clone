@@ -12,7 +12,7 @@ const Actress = () => {
   const [loading, setLoading] = useState(true);
   const [index, setIndex] = useState(0)
   // Target Pinterest Board URL for Deepika Padukone
-  const DEEPIKA_BOARD_URL = ['https://pinterest.com/Actressheels/deepika-padukone-hot/', 'https://www.pinterest.com/search/pins/?q=deepika%20padukone%20in%20high%20heels%20hot%20pics&rs=typed','https://www.pinterest.com/search/pins/?q=deepika%20padukone%20in%20high%20heels&rs=typed'];
+  const DEEPIKA_BOARD_URL = ['https://pinterest.com/Actressheels/deepika-padukone-hot/', 'https://www.pinterest.com/search/pins/?q=deepika%20padukone%20in%20high%20heels%20hot%20pics&rs=typed','https://www.pinterest.com/search/pins/?q=deepika%20padukone%20in%20high%20heels&rs=typed','https://in.pinterest.com/search/pins/?q=deepika%20padukone%20bold%20pics&rs=typed'];
   // Or use a specific board like: 'https://in.pinterest.com/username/deepika-padukone-board/'
 
   useEffect(() => {
