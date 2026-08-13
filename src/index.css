@@ -13,4 +13,15 @@ body{
     width: 100%;
   
   }
+  .pro{
+    display: flex;
+  }
+}
+
+.scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }

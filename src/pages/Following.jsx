@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useRef, useState } from 'react'
 import { useFeed } from '../hooks/UseFeed'
 import Post from './Post'
+import Interection from '../components/Interection'
 
 const ForYou = () => {
 
@@ -30,6 +31,7 @@ const fullPost = useFeed( 'actress,bollywood actress,red carpet,hollywood actres
             <div className='max-h-[90vh] w-[90%] mr-5 mt-3 overflow-hidden rounded-2xl'>
               <img className='rounded-2xl py-2 max-w-full max-h-full object-cover overflow-hidden' src={fun.thumbnail} alt="" />
             </div>
+             <Interection likes={fun.likes} views={fun.views} repost={fun.repost} /> 
           </div>
         </div>
       ))}
