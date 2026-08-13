@@ -8,7 +8,7 @@ const Malaika = () => {
       const [index, setIndex] = useState(0)
     
       // Target Pinterest Board URL for Deepika Padukone
-      const MALAIKA_BOARD_URL = ['https://www.pinterest.com/search/pins/?q=malaika%20arora%20hot%20image&rs=typed','https://in.pinterest.com/search/pins/?q=malaika%20arora%20in%20high%20heels%20bold%20pics&rs=typed']; 
+      const MALAIKA_BOARD_URL = ['https://www.pinterest.com/search/pins/?q=malaika%20arora%20hot%20image&rs=typed','https://in.pinterest.com/search/pins/?q=malaika%20arora%20in%20high%20heels%20bold%20pics&rs=typed','https://www.pinterest.com/pin/968414726135127932/']; 
       // Or use a specific board like: 'https://in.pinterest.com/username/deepika-padukone-board/'
     
       useEffect(() => {
@@ -20,7 +20,7 @@ const Malaika = () => {
           .then((res) => setPost(res.data.posts || []))
           .catch((err) => console.error('Error fetching Malaika images:', err))
           .finally(() => setLoading(false));
-      }, []);
+      }, [index]);
   return (
     <div>
       <div className="max-w-2xl mx-auto py-4">

@@ -13,7 +13,7 @@ const Actresses = () => {
   const [index, setIndex] = useState(0)
 
   // Target Pinterest Board URL for Deepika Padukone
-  const MILF_BOARD_URL = ['https://pinterest.com/Actressheels/milf-actress/','https://www.pinterest.com/search/pins/?q=bollywood%20hoties%20with%20high%20heels&rs=typed'];
+  const MILF_BOARD_URL = ['https://pinterest.com/Actressheels/milf-actress/','https://www.pinterest.com/search/pins/?q=bollywood%20hoties%20with%20high%20heels&rs=typed','https://www.pinterest.com/pin/1148558711229872839/','https://www.pinterest.com/pin/1059894093748971873/'];
   // Or use a specific board like: 'https://in.pinterest.com/username/deepika-padukone-board/'
 
   useEffect(() => {

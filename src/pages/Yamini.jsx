@@ -9,7 +9,7 @@ const Yamini = () => {
       const [index, setIndex] = useState(0)
     
       // Target Pinterest Board URL for Deepika Padukone
-      const YAMINI_BOARD_URL = ['https://www.pinterest.com/search/pins/?q=yamini%20malotra&rs=rs&source_id=rs_JLA3WzSn&eq=yamini&etslf=5481','https://in.pinterest.com/search/pins/?q=yamini%20malotra%20bold%20pics&rs=typed']; 
+      const YAMINI_BOARD_URL = ['https://www.pinterest.com/search/pins/?q=yamini%20malotra&rs=rs&source_id=rs_JLA3WzSn&eq=yamini&etslf=5481','https://in.pinterest.com/search/pins/?q=yamini%20malotra%20bold%20pics&rs=typed','https://www.pinterest.com/pin/943996771910737592/']; 
       // Or use a specific board like: 'https://in.pinterest.com/username/deepika-padukone-board/'
     
       useEffect(() => {

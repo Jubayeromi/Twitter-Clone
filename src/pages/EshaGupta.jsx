@@ -7,7 +7,7 @@ const EshaGupta = () => {
       const [index, setIndex] = useState(0)
     
       // Target Pinterest Board URL for Deepika Padukone
-      const ESHA_BOARD_URL = ['https://www.pinterest.com/search/pins/?q=esha%20gupta%20hot&rs=typed','https://www.pinterest.com/search/pins/?q=esha%20gupta%20in%20high%20heels%20hot%20pics&rs=typed','https://in.pinterest.com/search/pins/?q=esha%20gupta%20bold%20pics&rs=typed']; 
+      const ESHA_BOARD_URL = ['https://www.pinterest.com/search/pins/?q=esha%20gupta%20hot&rs=typed','https://www.pinterest.com/search/pins/?q=esha%20gupta%20in%20high%20heels%20hot%20pics&rs=typed','https://in.pinterest.com/search/pins/?q=esha%20gupta%20bold%20pics&rs=typed','https://www.pinterest.com/pin/1147362442597726971/']; 
       // Or use a specific board like: 'https://in.pinterest.com/username/deepika-padukone-board/'
     
       useEffect(() => {
