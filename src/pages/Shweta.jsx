@@ -12,7 +12,7 @@ const Shweta = () => {
     
       useEffect(() => {
         // Pass the target Pinterest URL as a parameter
-        const apiUrl = `http://localhost:5000/api/board/all?url=${encodeURIComponent(SHWETA_BOARD_URL)}`;
+        const apiUrl = `https://twitter-clone-wwk7.onrender.com/api/board/all?url=${encodeURIComponent(SHWETA_BOARD_URL)}`;
     
         axios
           .get(apiUrl)

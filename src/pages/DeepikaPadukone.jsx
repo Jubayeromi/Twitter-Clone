@@ -17,7 +17,7 @@ const Actress = () => {
 
   useEffect(() => {
     // Pass the target Pinterest URL as a parameter
-    const apiUrl = `http://localhost:5000/api/board/all?url=${encodeURIComponent(DEEPIKA_BOARD_URL[index])}`;
+    const apiUrl = `https://twitter-clone-wwk7.onrender.com/api/board/all?url=${encodeURIComponent(DEEPIKA_BOARD_URL[index])}`;
 
     axios
       .get(apiUrl)

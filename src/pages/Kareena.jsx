@@ -9,7 +9,7 @@ export default function NewApi() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/api/board/all')
+      .get('https://twitter-clone-wwk7.onrender.com/api/board/all')
       .then((res) => {
         setPost(res.data.posts || []);
       })
