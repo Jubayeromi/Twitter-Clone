@@ -1,8 +1,3 @@
-
-
-
-
-// server.js
 import express from 'express';
 import cors from 'cors';
 import puppeteer from 'puppeteer-extra';
@@ -14,16 +9,31 @@ const app = express();
 app.use(cors());
 
 app.get('/api/board/all', async (req, res) => {
-  // 1. Get requested board URL from query params, or default to Kareena's board
   const targetUrl = req.query.url || 'https://in.pinterest.com/Unseenbolly/kareena-kapoor-hot/';
 
   let browser;
   try {
     console.log(`[STEALTH] Fetching board: ${targetUrl}`);
-    browser = await puppeteer.launch({
-      headless: true,
-      args: ['--no-sandbox', '--disable-setuid-sandbox', '--window-size=1920,1080'],
-    });
+
+    // Detect if running on Render/Linux vs local Windows/Mac
+    const isProduction = process.env.RENDER || process.env.NODE_ENV === 'production';
+
+    if (isProduction) {
+      // Production: Use @sparticuz/chromium on Render
+      const chromium = await import('@sparticuz/chromium');
+      browser = await puppeteer.launch({
+        args: chromium.default.args,
+        defaultViewport: chromium.default.defaultViewport,
+        executablePath: await chromium.default.executablePath(),
+        headless: chromium.default.headless,
+      });
+    } else {
+      // Local Development: Use regular Puppeteer on Windows/Mac
+      browser = await puppeteer.launch({
+        headless: true,
+        args: ['--no-sandbox', '--disable-setuid-sandbox', '--window-size=1920,1080'],
+      });
+    }
 
     const page = await browser.newPage();
     await page.setViewport({ width: 1920, height: 1080 });
@@ -89,5 +99,5 @@ app.get('/api/board/all', async (req, res) => {
   }
 });
 
-const PORT = 5000;
-app.listen(PORT, () => console.log(`Server listening at http://localhost:${PORT}`));
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
