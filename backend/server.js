@@ -2,11 +2,19 @@ import express from 'express';
 import cors from 'cors';
 import puppeteer from 'puppeteer-extra';
 import StealthPlugin from 'puppeteer-extra-plugin-stealth';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const app = express();
+
+app.use(express.static(path.join(__dirname, '../dist')));
 
 puppeteer.use(StealthPlugin());
 
-const app = express();
 app.use(cors());
+
 
 app.get('/api/board/all', async (req, res) => {
   const targetUrl = req.query.url || 'https://in.pinterest.com/Unseenbolly/kareena-kapoor-hot/';
@@ -96,6 +104,13 @@ app.get('/api/board/all', async (req, res) => {
     if (browser) await browser.close();
     console.error('[ERROR]:', err.message);
     res.status(500).json({ error: err.message, posts: [] });
+  }
+});
+
+
+app.get('*', (req, res) => {
+  if (!req.path.startsWith('/api')) {
+    res.sendFile(path.join(__dirname, '../dist/index.html'));
   }
 });
 
