@@ -78,7 +78,7 @@ export function useFeed(query, topics) {
         };
 
 
-        console.log(napi)
+        // console.log(napi)
 
         const newPost = {
           name: `${uName.first} ${uName.last}`,

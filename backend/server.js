@@ -114,5 +114,9 @@ app.get('/{*splat}', (req, res) => {
   }
 });
 
+app.get('/',(req,res)=>{
+  res.json({status:"online", provider:"Groq", models:'GROQ_MODELS'})
+})
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
