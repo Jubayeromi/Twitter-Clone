@@ -5,7 +5,7 @@ import Post from './Post'
 
 import Interection from '../components/Interection';
 
-const ForYou = (props) => {
+const ForYou = () => {
 
   const fullPost = useFeed('nature , sunset, mountains', 'nature, wallpaper')
 
